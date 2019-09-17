@@ -1,5 +1,7 @@
-""" This module parses JSON objects from log files and writes them to separate files """
-# cerner_2^5_2019
+"""
+cerner_2^5_2019
+This module parses JSON objects from log files and writes them to separate files
+"""
 import sys
 import uuid
 import os
