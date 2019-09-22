@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'promisekit-example' do
+pod 'PromiseKit', '~> 6.8'
+end
