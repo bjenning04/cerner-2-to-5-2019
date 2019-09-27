@@ -32,8 +32,8 @@ is_prime(Ntest, N, Len) ->
     A = make(K),
     if 
 	A < N ->
-        %% Would be better to use powrem() as listed below, but couldn't fit into 32 lines of code
-        % case powrem(A, N, N) of
+        %% Would be better to use powmod() as listed below, but couldn't fit into 32 lines of code
+        % case powmod(A, N, N) of
         case trunc(math:pow(A,N)) rem N of
 		A -> is_prime(Ntest-1,N,Len);
 		_ -> false
@@ -48,16 +48,14 @@ new_seed() ->
     put(random_seed, {H*X rem 32767, M*X rem 32767, S*X rem 32767}).
 
 %% A better way to calculate A^N % N
-% powrem(A, 1, M) ->
-%     A rem M;
-% powrem(A, 2, M) ->
-%     A*A rem M;
-% powrem(A, B, M) ->
+% powmod(A, 1, M) -> A rem M;
+% powmod(A, 2, M) -> A*A rem M;
+% powmod(A, B, M) ->
 %     B1 = B div 2,
 %     B2 = B - B1,
 %     %% B2 = B1 or B1+1
-%     P = powrem(A, B1, M),
+%     P = powmod(A, B1, M),
 %     case B2 of
 %     B1 -> (P*P) rem M;
-%     -> (P*P*A) rem M
+%     _ -> (P*P*A) rem M
 %     end.
