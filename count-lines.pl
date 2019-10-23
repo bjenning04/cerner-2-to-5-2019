@@ -16,7 +16,7 @@ sub count {
 
     while(my $line = <IN>) {
         if($line =~ /^\s*$/) { ++$nblank; }        # Blank line
-        elsif($line =~ /^\s*\#/) { ++$ncomm; }     # Comment line
+        elsif($line =~ /^\s*\;/) { ++$ncomm; }     # Comment line
         else { ++$ncode; }                         # Code line
     }
 

@@ -1,27 +1,28 @@
 /*
 cerner_2^5_2019
-Simple CSS effects
+Simple CSS effects refactored in LESS
 */
 body > iframe {
-    display: block;
-    margin: 200px auto 0 auto;
-    transition: all 0.3s ease;
+  display: block;
+  margin: 200px auto 0 auto;
+  transition: all 0.3s ease;
 }
 
 .fade {
-    opacity: 0.5;
+  opacity: 0.5;
 }
-
 .fade:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .grow-rotate:hover {
-    -webkit-transform: scale(1.3) rotateZ(-30deg);
-    -ms-transform: scale(1.3) rotateZ(-30deg);
-    transform: scale(1.3) rotateZ(-30deg);
+  -webkit-transform: scale(1.3) rotateZ(-30deg);
+  -ms-transform: scale(1.3) rotateZ(-30deg);
+  transform: scale(1.3) rotateZ(-30deg);
 }
 
 .circle:hover {
-    border-radius: 50%;
+  border-radius: 50%;
 }
+
+/*# sourceMappingURL=styles.css.map */

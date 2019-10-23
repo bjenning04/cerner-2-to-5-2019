@@ -6,7 +6,7 @@ int main() {
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
         printf("SDL could notr initialize! SDL_Error: %s\n", SDL_GetError());
     } else {
-        SDL_Window *window = window = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 640, 480, SDL_WINDOW_SHOWN);
+        SDL_Window *window = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 640, 480, SDL_WINDOW_SHOWN);
         if (window == NULL) {
             printf("Window could not be created! SDL_Error: %s\n", SDL_GetError());
         } else {
